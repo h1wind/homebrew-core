@@ -11,16 +11,6 @@ class MingwW64Msvcrt < Formula
     regex(%r{url=.*?release/mingw-w64[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
-  bottle do
-    sha256 arm64_sequoia: "a9ea389f938684b158744296709e7bbf6eac7aaab586ce77179004f27eb27cf7"
-    sha256 arm64_sonoma:  "0dca5afe15f5e959927d43281181e5dedd801c4f0165d4868309267827e6f24a"
-    sha256 arm64_ventura: "f4d1fd8ba64fa38524639c4c57da56bd79f401a8804dcd8070440e25700f100f"
-    sha256 sonoma:        "87346a8f508721e524df7d9f6359708044c857373ddd09b43734b8dbf5f45b6a"
-    sha256 ventura:       "674057ef36abe6c677e23ee57ced865aaa07b3281675bbe53d11c74f76bdb487"
-    sha256 arm64_linux:   "fa83501cce50b4729ef8185bebe2454d703b621666c331b6dbc193e3b60d774f"
-    sha256 x86_64_linux:  "c2d0c0416f9322e0dabe14d321736f934b58a36ec36dc3b1c88770f63d5ba8cf"
-  end
-
   # binutils searches for zstd using pkg-config
   depends_on "pkgconf" => :build
   # Apple's makeinfo is old and has bugs
